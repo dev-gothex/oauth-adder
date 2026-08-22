@@ -9,7 +9,7 @@ import json
 class ua_builder():
     def __init__(self,ua):
         self.ua=ua
-        
+        self.session=requests.Session(impersonate='chrome145')
     def version(self):
         match = re.search(r"Chrome/(\d+)",self.ua)
         if match:
@@ -71,7 +71,7 @@ class ua_builder():
         else:
             return "add urself"
     def builder_id(self):
-        r = requests.get("https://discord.com")
+        r = self.session.get("https://discord.com")
         match = re.search(r'"BUILD_NUMBER":"(\d+)"', r.text)
         
         if match:
