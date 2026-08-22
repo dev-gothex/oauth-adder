@@ -1,0 +1,7 @@
+{
+    "client_id":"",
+    "useragent":"",
+    "redirect_url": "",
+    "response_type": "code",
+    "scope": "identify%20guilds.join"
+}
