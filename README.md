@@ -1,8 +1,6 @@
 # Discord OAuth Adder
 
-A Python tool that mass authorizes Discord tokens via OAuth2 to capture access and refresh tokens for the `identify` and `guilds.join` scopes.
-
-It uses `curl_cffi` for HTTP requests and automatically spoofs browser-related headers to mimic a Chrome 145 client.
+A Python tool that mass authorizes Discord tokens via OAuth2 to capture access and refresh tokens for the `identify` and `guilds.join` scopes.It uses `curl_cffi` for HTTP requests and automatically spoofs browser-related headers to mimic a Chrome 145 client.
 
 ## Preview
 
@@ -12,7 +10,7 @@ It uses `curl_cffi` for HTTP requests and automatically spoofs browser-related h
 
 * **Mass Authorization:** Runs through a list of tokens and authorizes them via Discord's OAuth2 flow.
 * **Token Capture:** Runs a local Flask server to catch the callback and saves `user_id:access_token:refresh_token` to `i.txt`.
-* **Browser Headers:** Builds `sec-ch-ua`, `x-super-properties`, `x-installation-id`, and other headers from the User-Agent in `config.json`.
+* **Browser Headers:** Builds `sec-ch-ua`, `x-super-properties` and other headers from the User-Agent in `config.json`.
 * **Token Support:** Reads Discord tokens from `token.txt`, supporting colon-separated formats.
 * **Per-token timing:** Shows how long each authorization request takes.
 * **Simple output:** Reports successful callbacks and failed requests with their status codes.
@@ -121,10 +119,9 @@ The response body is printed for unsuccessful requests to help with debugging.
 ## Notes
 
 * The authorize payload in `main.py` uses hardcoded placeholder values (`10000`) for `guild_id`, `channel_id`, and `channel_type`. Replace these with your target IDs if needed.
-* Grease, `x-super-properties`, and `x-installation-id` headers are dynamically generated per request.
+* Grease, `x-super-properties`, and other headers are dynamically generated per request.
 * Keep your `token.txt` and `.env` private.
 * Don't paste your token when reporting an issue.
-
 ## Rules
 
 * Don't copy the project, rename it, and claim you made it.
