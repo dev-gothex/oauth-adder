@@ -122,21 +122,3 @@ The response body is printed for unsuccessful requests to help with debugging.
 * Grease, `x-super-properties`, and other headers are dynamically generated per request.
 * Keep your `token.txt` and `.env` private.
 * Don't paste your token when reporting an issue.
-## Rules
-
-* Don't copy the project, rename it, and claim you made it.
-* Don't sell or paywall the project.
-* Use it only with accounts you own or are authorized to manage.
-* If you use parts of the code, give credit and link back to [this repository](https://github.com/NoTinyxd/oauth-adder).
-
-## Disclaimer
-
-This project is provided for educational purposes. Use it at your own risk. The author isn't responsible for account restrictions, loss of access, or other consequences resulting from its use.
-
-## ☕ Donations
-
-This project is free. If it saved you some time and you want to support it, LTC is appreciated:
-
-```text
-LXdgPhE4UfVUgtfXkT7wR1T4Jxam9sCsbb
-```
